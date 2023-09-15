@@ -1,4 +1,5 @@
-@use "abstract/reset";
-@use "base";
-@use "abstract/colors";
-@use "abstract/mediaqueries";
+@use "./abstract/reset";
+@use "./base";
+@use "./components/svg.scss";
+@use "./abstract/colors";
+@use "./abstract/mediaqueries";

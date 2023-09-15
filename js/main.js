@@ -16,10 +16,16 @@ class GetData {
     }
 }
 
+
+
+class Main{
+
+}
+
 class App{
     api
     constructor(){
-        this.api = new GetData("../data/data.json")
+        this.api = new GetData("./data/data.json")
         this.api.getJson().then((data) => {});
     }
 }
