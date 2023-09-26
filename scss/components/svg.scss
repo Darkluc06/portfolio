@@ -1,0 +1,21 @@
+.svg{
+    position: absolute;
+    height: 32rem;
+    aspect-ratio: 1/1;
+    &--left-bottom{
+        bottom: 0;
+        left: 0;
+        grid-column: 2/6;
+        grid-row: 8/12;
+    }
+    &--right-top{
+        top: 0;
+        right: 0;
+        grid-column: 8/12;
+        grid-row: 2/7;
+    }
+    &>img{
+        height: 100%;
+        width: 100%;
+    }
+}
