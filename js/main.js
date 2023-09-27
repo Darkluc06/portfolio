@@ -24,11 +24,11 @@ class Renderer {
 
 
 
-class Main{
+class Main {
     renderer
     data
     frontPage
-    constructor(renderer, data){
+    constructor(renderer, data) {
         this.renderer = renderer;
         this.data = data;
         this.frontPage = new FrontPage(this.renderer);
@@ -37,13 +37,13 @@ class Main{
 
 }
 
-class FrontPage{
+class FrontPage {
     renderer;
     frontpageSection
     frontPageMain;
     aside;
 
-    constructor(renderer){
+    constructor(renderer) {
         this.renderer = renderer;
         this.frontpageSection = document.createElement("section");
         this.frontpageSection.classList.add("frontPage");
@@ -51,47 +51,78 @@ class FrontPage{
 
         this.aside = new Aside(this.frontpageSection, this.renderer);
     }
-    render(){
+    render() {
         this.renderer.render("body", this.frontpageSection)
     }
 }
 
 
-class Aside{
+class Aside {
+    aside;
     ul;
     logo;
     AsideItem;
     frontpageSection;
-    renderer
-    constructor(frontpageSection, renderer){
+    renderer;
+    logoButton;
+    logoLink;
+    logoImg;
+    constructor(frontpageSection, renderer) {
         this.frontpageSection = frontpageSection;
         this.renderer = renderer;
+
+
+        this.elementsCreate();
+        this.logoCreate();
+        console.log(this.logoButton, this.logoLink, this.logoImg)
+        this.render();
+    }
+
+    elementsCreate() {
+        this.aside = document.createElement("section");
+        this.aside.classList.add("frontPage__aside");
+
         this.ul = document.createElement("ul");
         this.ul.classList.add("frontPage__nav");
     }
-    render(){
-        
+
+    logoCreate() {
+        this.logoButton = document.createElement("button")
+        this.logoButton.classList.add("frontPage__logo")
+        this.logoLink = document.createElement("a")
+        this.logoLink.classList.add("frontPage__logoLink")
+        this.logoImg = document.createElement("img")
+        this.logoImg.classList.add("frontPage__logoImg")
+        this.logoImg.setAttribute("src", "./img/luc's logo.png");
+        this.logoImg.setAttribute("alt", "logo for Luc's portfolio resembling the first letters of the name Luc Zuidema(LZ)");
+    }
+
+    render() {
+        this.renderer.render(".frontPage", this.aside)
+        this.renderer.render(".frontPage__aside", this.logoButton)
+        this.renderer.render(".frontPage__logo", this.logoLink)
+        this.renderer.render(".frontPage__logoLink", this.logoImg)
     }
 }
 
-class AsideItem{
-    constructor(){
+class AsideItem {
+    constructor() {
 
     }
 }
 
-class FrontPageMain{
-    constructor(){
+class FrontPageMain {
+    constructor() {
 
     }
 }
 
 
-class App{
+class App {
     api;
     main;
     renderer;
-    constructor(){
+    constructor() {
         this.api = new GetData("./data/data.json");
         this.renderer = new Renderer();
         this.api.getJson().then((data) => {
