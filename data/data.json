@@ -1,7 +1,26 @@
 {
-    "":[
+    "english": [
         {
-            "":""
+            "navItem": [
+                {
+                    "1": "Skills",
+                    "2": "Projects",
+                    "3": "About me",
+                    "4": "Contact"
+                }
+            ]
+        }
+    ],
+    "nederlands": [
+        {
+            "navItem": [
+                {
+                    "1": "Skills",
+                    "2": "Projecten",
+                    "3": "About me",
+                    "4": "Contact"
+                }
+            ]
         }
     ]
 }

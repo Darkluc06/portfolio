@@ -61,7 +61,7 @@ class Aside {
     aside;
     ul;
     logo;
-    AsideItem;
+    asideItem;
     frontpageSection;
     renderer;
     logoButton;
@@ -74,8 +74,10 @@ class Aside {
 
         this.elementsCreate();
         this.logoCreate();
-        console.log(this.logoButton, this.logoLink, this.logoImg)
         this.render();
+
+
+        this.asideItem = new AsideItem(this.renderer);
     }
 
     elementsCreate() {
@@ -97,17 +99,55 @@ class Aside {
         this.logoImg.setAttribute("alt", "logo for Luc's portfolio resembling the first letters of the name Luc Zuidema(LZ)");
     }
 
-    render() {
-        this.renderer.render(".frontPage", this.aside)
-        this.renderer.render(".frontPage__aside", this.logoButton)
-        this.renderer.render(".frontPage__logo", this.logoLink)
-        this.renderer.render(".frontPage__logoLink", this.logoImg)
-    }
+
+
+render() {
+    this.renderer.render(".frontPage", this.aside)
+    this.renderer.render(".frontPage__aside", this.logoButton)
+    this.renderer.render(".frontPage__logo", this.logoLink)
+    this.renderer.render(".frontPage__logoLink", this.logoImg)
+    this.renderer.render(".frontPage__aside", this.ul);
+}
 }
 
-class AsideItem {
-    constructor() {
+    // <li class="frontPage__navItem">
+    //     <button class="frontPage__navButton">
+    //         <span class="frontPage__navCircle"></span>
+    //         <img src="./img/Skills_white.png" alt="Hard skills" class="frontPage__navImg">
+    //     </button>
+    // </li>
 
+class AsideItem {
+    item;
+    button;
+    sphere;
+    text;
+    renderer
+    constructor(renderer) {
+        this.renderer = renderer;
+        this.elementsCreate()
+        this.render()
+    }
+    elementsCreate() {
+        this.item = document.createElement("li");
+        this.item.classList.add("frontPage__navItem");
+
+        this.button = document.createElement("button");
+        this.button.classList.add("frontPage__navButton");
+
+        this.sphere = document.createElement("span");
+        this.sphere.classList.add("frontPage__navSphere");
+
+        this.text = document.createElement("h3");
+        this.text.classList.add("frontPage__navImg");
+        this.text.innerText = "Skills"
+    }
+
+    render(){
+        this.renderer.render(".frontPage__nav", this.item);
+        this.renderer.render(".frontPage__navItem", this.button);
+        this.renderer.render(".frontPage__navButton", this.sphere);
+        this.renderer.render(".frontPage__navButton", this.text);
     }
 }
 
