@@ -3,10 +3,10 @@
         {
             "navItem": [
                 {
-                    "1": "Skills",
-                    "2": "Projects",
-                    "3": "About me",
-                    "4": "Contact"
+                    "0": "Skills",
+                    "1": "Projects",
+                    "2": "About me",
+                    "3": "Contact"
                 }
             ]
         }
@@ -15,10 +15,10 @@
         {
             "navItem": [
                 {
-                    "1": "Skills",
-                    "2": "Projecten",
-                    "3": "About me",
-                    "4": "Contact"
+                    "0": "Skills",
+                    "1": "Projecten",
+                    "2": "About me",
+                    "3": "Contact"
                 }
             ]
         }

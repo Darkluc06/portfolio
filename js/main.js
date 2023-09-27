@@ -20,6 +20,14 @@ class Renderer {
     render(whereToRender, whatToRender) {
         document.querySelector(whereToRender).appendChild(whatToRender);
     }
+    renderChild(whereToRender, whatToRender, i) {
+        parent = document.querySelector(whereToRender);
+        parent.children[i].appendChild(whatToRender);
+    }
+    renderChildChild(whereToRender, whatToRender, i) {
+        parent = document.querySelector(whereToRender);
+        parent.children[i].children[0].appendChild(whatToRender);
+    }
 }
 
 
@@ -31,7 +39,7 @@ class Main {
     constructor(renderer, data) {
         this.renderer = renderer;
         this.data = data;
-        this.frontPage = new FrontPage(this.renderer);
+        this.frontPage = new FrontPage(this.renderer, data);
 
     }
 
@@ -42,14 +50,16 @@ class FrontPage {
     frontpageSection
     frontPageMain;
     aside;
+    data
 
-    constructor(renderer) {
+    constructor(renderer, data) {
         this.renderer = renderer;
+        this.data = data
         this.frontpageSection = document.createElement("section");
         this.frontpageSection.classList.add("frontPage");
         this.render();
 
-        this.aside = new Aside(this.frontpageSection, this.renderer);
+        this.aside = new Aside(this.frontpageSection, this.renderer, data[0].navItem[0]);
     }
     render() {
         this.renderer.render("body", this.frontpageSection)
@@ -67,9 +77,12 @@ class Aside {
     logoButton;
     logoLink;
     logoImg;
-    constructor(frontpageSection, renderer) {
+    navData
+    constructor(frontpageSection, renderer, navData) {
         this.frontpageSection = frontpageSection;
         this.renderer = renderer;
+        this.navData = navData
+
 
 
         this.elementsCreate();
@@ -77,7 +90,10 @@ class Aside {
         this.render();
 
 
-        this.asideItem = new AsideItem(this.renderer);
+        for (let i = 0; i < Object.keys(this.navData).length; i++) {
+            this.asideItem = new AsideItem(this.renderer, this.navData[i], i);
+        }
+
     }
 
     elementsCreate() {
@@ -101,30 +117,27 @@ class Aside {
 
 
 
-render() {
-    this.renderer.render(".frontPage", this.aside)
-    this.renderer.render(".frontPage__aside", this.logoButton)
-    this.renderer.render(".frontPage__logo", this.logoLink)
-    this.renderer.render(".frontPage__logoLink", this.logoImg)
-    this.renderer.render(".frontPage__aside", this.ul);
-}
+    render() {
+        this.renderer.render(".frontPage", this.aside)
+        this.renderer.render(".frontPage__aside", this.logoButton)
+        this.renderer.render(".frontPage__logo", this.logoLink)
+        this.renderer.render(".frontPage__logoLink", this.logoImg)
+        this.renderer.render(".frontPage__aside", this.ul);
+    }
 }
 
-    // <li class="frontPage__navItem">
-    //     <button class="frontPage__navButton">
-    //         <span class="frontPage__navCircle"></span>
-    //         <img src="./img/Skills_white.png" alt="Hard skills" class="frontPage__navImg">
-    //     </button>
-    // </li>
 
 class AsideItem {
     item;
     button;
     sphere;
     text;
-    renderer
-    constructor(renderer) {
+    renderer;
+    i;
+    constructor(renderer, data, i) {
         this.renderer = renderer;
+        this.data = data
+        this.i = i
         this.elementsCreate()
         this.render()
     }
@@ -140,14 +153,14 @@ class AsideItem {
 
         this.text = document.createElement("h3");
         this.text.classList.add("frontPage__navImg");
-        this.text.innerText = "Skills"
+        this.text.innerText = this.data
     }
 
-    render(){
+    render() {
         this.renderer.render(".frontPage__nav", this.item);
-        this.renderer.render(".frontPage__navItem", this.button);
-        this.renderer.render(".frontPage__navButton", this.sphere);
-        this.renderer.render(".frontPage__navButton", this.text);
+        this.renderer.renderChild(".frontPage__nav", this.button, this.i);
+        this.renderer.renderChildChild(".frontPage__nav", this.sphere, this.i);
+        this.renderer.renderChildChild(".frontPage__nav", this.text, this.i);
     }
 }
 
@@ -156,6 +169,33 @@ class FrontPageMain {
 
     }
 }
+/* <section class="frontPage__main">
+    <figure class="svg svg--left-bottom">
+        <img src="./img/sqaureShape(left).png" alt="">
+    </figure>
+    <figure class="svg svg--right-top">
+        <img src="./img/sqaureShape(right).png" alt="">
+    </figure>
+
+    <div class="frontPage__centerTitle frontPage__centerTitle--1">
+        <h1 class="frontPage__title">
+            Fullstack
+        </h1>
+        <h1 class="frontPage__title">
+            Developer
+        </h1>
+    </div>
+
+    <div class="frontPage__centerTitle frontPage__centerTitle--2">
+        <h1 class="frontPage__title">
+            Luc
+        </h1>
+        <h1 class="frontPage__title">
+            Zuidema
+        </h1>
+    </div>
+
+</section> */
 
 
 class App {
@@ -166,7 +206,7 @@ class App {
         this.api = new GetData("./data/data.json");
         this.renderer = new Renderer();
         this.api.getJson().then((data) => {
-            this.main = new Main(this.renderer, data)
+            this.main = new Main(this.renderer, data.english)
         });
     }
 }
