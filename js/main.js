@@ -61,9 +61,9 @@ class FrontPage {
         this.frontpageSection.classList.add("frontPage");
         this.render();
 
-        this.aside = new Aside(this.frontpageSection, this.renderer, data[0].navItem[0]);
+        this.aside = new Aside(this.frontpageSection, this.renderer, this.data[0].navItem[0]);
 
-        this.frontPageMain = new FrontPageMain(this.renderer);
+        this.frontPageMain = new FrontPageMain(this.renderer, this.data[0].title[0]);
     }
     render() {
         this.renderer.render("body", this.frontpageSection)
@@ -174,8 +174,10 @@ class FrontPageMain {
     renderer;
     frontPageImage;
     frontPageTitle;
-    constructor(renderer) {
+    constructor(renderer, data) {
         this.renderer = renderer;
+        this.data = data;
+        console.log(data)
         
         this.main = document.createElement("section");
         this.main.classList.add("frontPage__main");
@@ -184,7 +186,7 @@ class FrontPageMain {
         this.frontPageImage = new FrontPageImage("left",this.renderer);
         this.frontPageImage = new FrontPageImage("right",this.renderer);
         for(let i = 0; i < 2; i++){
-            this.frontPageTitle = new FrontPageTitle(i, this.renderer)
+            this.frontPageTitle = new FrontPageTitle(i, this.renderer, this.data[i])
         }
 
     }
@@ -218,36 +220,36 @@ class FrontPageImage{
 
 class FrontPageTitle{
     div;
-    h1;
+    h1_1;
+    h1_2;
     i;
     renderer;
-    constructor(){
+    constructor(i, renderer, data){
+        this.i = i;
+        this.renderer = renderer
+        this.data = data
+
         this.div = document.createElement("div")
         this.div.classList.add("frontPage__centerTitle")
         this.div.classList.add(`frontPage__centerTitle--${this.i}`)
+
+        this.h1_1 = document.createElement("h1")
+        this.h1_1.classList.add("frontPage__title")
+        this.h1_1.innerText = this.data[0][0]
+
+        this.h1_2 = document.createElement("h1")
+        this.h1_2.classList.add("frontPage__title")
+        this.h1_2.innerText = this.data[0][1]
+
+        this.render();
+    }
+    render(){
+        this.renderer.render(".frontPage__main", this.div)
+
+        this.renderer.render(`.frontPage__centerTitle--${this.i}`, this.h1_1)
+        this.renderer.render(`.frontPage__centerTitle--${this.i}`, this.h1_2)
     }
 }
-/*
-    <div class="frontPage__centerTitle frontPage__centerTitle--1">
-        <h1 class="frontPage__title">
-            Fullstack
-        </h1>
-        <h1 class="frontPage__title">
-            Developer
-        </h1>
-    </div>
-
-    <div class="frontPage__centerTitle frontPage__centerTitle--2">
-        <h1 class="frontPage__title">
-            Luc
-        </h1>
-        <h1 class="frontPage__title">
-            Zuidema
-        </h1>
-    </div>
-
-</section> */
-
 
 class App {
     api;

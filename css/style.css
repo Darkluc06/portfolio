@@ -122,12 +122,12 @@ body {
   padding: 4rem;
   z-index: 2;
 }
-.frontPage__centerTitle--1 {
+.frontPage__centerTitle--0 {
   grid-column: 8/12;
   grid-row: 2/6;
   padding-left: 0;
 }
-.frontPage__centerTitle--2 {
+.frontPage__centerTitle--1 {
   grid-column: 2/6;
   grid-row: 8/12;
 }
