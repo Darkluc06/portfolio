@@ -32,6 +32,8 @@ class Renderer {
 
 
 
+
+
 class Main {
     renderer
     data
@@ -60,6 +62,8 @@ class FrontPage {
         this.render();
 
         this.aside = new Aside(this.frontpageSection, this.renderer, data[0].navItem[0]);
+
+        this.frontPageMain = new FrontPageMain(this.renderer);
     }
     render() {
         this.renderer.render("body", this.frontpageSection)
@@ -152,12 +156,12 @@ class AsideItem {
         this.sphere.classList.add("frontPage__navSphere");
 
         this.text = document.createElement("h3");
-        this.text.classList.add("frontPage__navImg");
+        this.text.classList.add("frontPage__navText");
         this.text.innerText = this.data
     }
 
     render() {
-        this.renderer.render(".frontPage__nav", this.item);
+        this.renderer.render(".frontPage__nav", this.item)
         this.renderer.renderChild(".frontPage__nav", this.button, this.i);
         this.renderer.renderChildChild(".frontPage__nav", this.sphere, this.i);
         this.renderer.renderChildChild(".frontPage__nav", this.text, this.i);
@@ -165,18 +169,65 @@ class AsideItem {
 }
 
 class FrontPageMain {
-    constructor() {
+    main;
+    figure;
+    renderer;
+    frontPageImage;
+    frontPageTitle;
+    constructor(renderer) {
+        this.renderer = renderer;
+        
+        this.main = document.createElement("section");
+        this.main.classList.add("frontPage__main");
+        
+        this.render()
+        this.frontPageImage = new FrontPageImage("left",this.renderer);
+        this.frontPageImage = new FrontPageImage("right",this.renderer);
+        for(let i = 0; i < 2; i++){
+            this.frontPageTitle = new FrontPageTitle(i, this.renderer)
+        }
 
     }
+    render(){
+        this.renderer.render(".frontPage", this.main)
+    }
 }
-/* <section class="frontPage__main">
-    <figure class="svg svg--left-bottom">
-        <img src="./img/sqaureShape(left).png" alt="">
-    </figure>
-    <figure class="svg svg--right-top">
-        <img src="./img/sqaureShape(right).png" alt="">
-    </figure>
 
+class FrontPageImage{
+    figure;
+    img;
+    renderer;
+    constructor(direction, renderer){
+        this.renderer = renderer;
+        this.direction = direction
+
+        this.figure = document.createElement("figure");
+        this.figure.classList.add("halfSquare")
+        this.figure.classList.add(`halfSquare--${this.direction}`)
+
+        this.img = document.createElement("img");
+        this.img.setAttribute("src", `./img/sqaureShape(${direction}).png`);
+
+        this.render()
+    }
+    render(){
+        this.renderer.render(".frontPage__main", this.figure);
+        this.renderer.render(`.halfSquare--${this.direction}`, this.img)
+    }
+}
+
+class FrontPageTitle{
+    div;
+    h1;
+    i;
+    renderer;
+    constructor(){
+        this.div = document.createElement("div")
+        this.div.classList.add("frontPage__centerTitle")
+        this.div.classList.add(`frontPage__centerTitle--${this.i}`)
+    }
+}
+/*
     <div class="frontPage__centerTitle frontPage__centerTitle--1">
         <h1 class="frontPage__title">
             Fullstack

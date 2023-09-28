@@ -8,6 +8,22 @@
                     "2": "About me",
                     "3": "Contact"
                 }
+            ],
+            "title": [
+                {
+                    "0": [
+                        {
+                            "0": "Fullstack",
+                            "1": "Developer"
+                        }
+                    ],
+                    "1": [
+                        {
+                            "0": "Luc",
+                            "1": "Zuidema"
+                        }
+                    ]
+                }
             ]
         }
     ],

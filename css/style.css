@@ -99,7 +99,7 @@ body {
   transform: translateX(-80px) translateY(-90px) skewX(-20deg);
   filter: blur(10px);
 }
-.frontPage__navImg {
+.frontPage__navText {
   text-shadow: -0.2rem 0.2rem rgba(0, 0, 0, 0.3);
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -146,13 +146,13 @@ body {
   height: 32rem;
   aspect-ratio: 1/1;
 }
-.halfSquare--left-bottom {
+.halfSquare--left {
   bottom: 0;
   left: 0;
   grid-column: 2/6;
   grid-row: 8/12;
 }
-.halfSquare--right-top {
+.halfSquare--right {
   top: 0;
   right: 0;
   grid-column: 8/12;
