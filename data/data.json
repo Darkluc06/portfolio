@@ -1,7 +1,7 @@
 {
     "english": [
         {
-            "navItem": [
+            "headers": [
                 {
                     "0": "Skills",
                     "1": "Projects",
@@ -24,12 +24,34 @@
                         }
                     ]
                 }
+            ],
+            "skills": [
+                {
+                    "reference": [
+                        {
+                            "0": "html",
+                            "1": "css",
+                            "2": "Js",
+                            "3": "Scss",
+                            "4": "Php"
+                        }
+                    ],
+                    "image": [
+                        {
+                            "0": "./img/html.png",
+                            "1": "./img/css.png",
+                            "2": "./img/js.png",
+                            "3": "./img/scss.png",
+                            "4": "./img/php.png"
+                        }
+                    ]
+                }
             ]
         }
     ],
     "nederlands": [
         {
-            "navItem": [
+            "headers": [
                 {
                     "0": "Skills",
                     "1": "Projecten",

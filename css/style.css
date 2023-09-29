@@ -22,7 +22,7 @@ body {
 }
 
 .frontPage {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
 }
@@ -106,10 +106,8 @@ body {
   font-size: 200%;
   color: white;
 }
-.frontPage__navHeaders {
-  font-size: 130%;
-}
 .frontPage__main {
+  height: 100%;
   width: 85%;
   position: relative;
   display: grid;
@@ -161,6 +159,55 @@ body {
 .halfSquare > img {
   height: 100%;
   width: 100%;
+}
+
+.skills {
+  height: 65rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.skills__title {
+  text-shadow: -0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+  font-family: "Asus Rog", "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 300%;
+  color: white;
+}
+.skills__itemsWrapper {
+  display: flex;
+  height: 50rem;
+  gap: 4rem;
+}
+.skills__itemWrapper {
+  height: 40rem;
+  width: 20%;
+}
+.skills__button {
+  all: unset;
+  height: 40rem;
+  width: 25rem;
+  background: red;
+  position: relative;
+  border-radius: 2rem;
+}
+.skills__button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 80px solid black;
+  border-right: 80px solid red;
+  width: 0;
+}
+.skills__button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 80px solid black;
+  border-left: 80px solid red;
+  width: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
