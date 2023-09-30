@@ -288,7 +288,7 @@ class Skills{
         
 
         for(let i = 0; i < Object.keys(this.data.reference[0]).length; i++){
-            this.skillsItems = new SkillsItems(this.data.reference[0][i], this.renderer, i);
+            this.skillsItems = new SkillsItems(this.data, this.renderer, i);
 
         }
 
@@ -309,6 +309,7 @@ class SkillsItems{
     data;
     renderer;
     i;
+    img;
     constructor(data, renderer, i){
         this.data = data
         this.renderer = renderer
@@ -325,12 +326,17 @@ class SkillsItems{
         this.figure = document.createElement("figure");
         this.figure.classList.add("skills__figure");
 
+        this.img = document.createElement("img");
+        this.img.classList.add("skills__img");
+        this.img.setAttribute("src", this.data.image[0][i])
+
         this.render()
     }
     render(){
         this.renderer.render(".skills__itemsWrapper", this.section)
         this.renderer.renderChild(".skills__itemsWrapper", this.button, this.i);
         this.renderer.render(`.skills__button--${this.i}`, this.figure)
+        this.renderer.renderChild(`.skills__button--${this.i}`, this.img, 0)
     }
 }
 

@@ -177,11 +177,37 @@ body {
 .skills__itemsWrapper {
   display: flex;
   height: 50rem;
+  width: 100vw;
   gap: 4rem;
+  position: relative;
 }
 .skills__itemWrapper {
   height: 40rem;
   width: 20%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.skills__itemWrapper--0 {
+  bottom: 0;
+  left: 0;
+}
+.skills__itemWrapper--1 {
+  top: 0;
+  left: 20%;
+}
+.skills__itemWrapper--2 {
+  bottom: 0;
+  left: 40%;
+}
+.skills__itemWrapper--3 {
+  top: 0;
+  left: 60%;
+}
+.skills__itemWrapper--4 {
+  bottom: 0;
+  left: 80%;
 }
 .skills__button {
   all: unset;
@@ -190,6 +216,7 @@ body {
   background: red;
   position: relative;
   border-radius: 2rem;
+  flex-shrink: 1;
 }
 .skills__button:before {
   content: "";
@@ -197,7 +224,6 @@ body {
   top: 0;
   left: 0;
   border-top: 80px solid black;
-  border-right: 80px solid red;
   width: 0;
 }
 .skills__button:after {
@@ -206,8 +232,63 @@ body {
   bottom: 0;
   right: 0;
   border-bottom: 80px solid black;
-  border-left: 80px solid red;
   width: 0;
+}
+.skills__button--0:before {
+  border-right: 80px solid #e67e2e;
+}
+.skills__button--0:after {
+  border-left: 80px solid #e67e2e;
+}
+.skills__button--0 {
+  background: #e67e2e;
+}
+.skills__button--1:before {
+  border-right: 80px solid #6f8af0;
+}
+.skills__button--1:after {
+  border-left: 80px solid #6f8af0;
+}
+.skills__button--1 {
+  background: #6f8af0;
+}
+.skills__button--2:before {
+  border-right: 80px solid #ffec6e;
+}
+.skills__button--2:after {
+  border-left: 80px solid #ffec6e;
+}
+.skills__button--2 {
+  background: #ffec6e;
+}
+.skills__button--3:before {
+  border-right: 80px solid #a66887;
+}
+.skills__button--3:after {
+  border-left: 80px solid #a66887;
+}
+.skills__button--3 {
+  background: #a66887;
+}
+.skills__button--4:before {
+  border-right: 80px solid #8993be;
+}
+.skills__button--4:after {
+  border-left: 80px solid #8993be;
+}
+.skills__button--4 {
+  background: #8993be;
+}
+.skills__figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24rem;
+  width: 24rem;
+}
+.skills__img {
+  height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
