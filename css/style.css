@@ -217,6 +217,12 @@ body {
   position: relative;
   border-radius: 2rem;
   flex-shrink: 1;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.skills__button:hover {
+  transform: scale(1.15);
+  filter: blur(0);
 }
 .skills__button:before {
   content: "";

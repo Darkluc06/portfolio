@@ -1,64 +1,3 @@
-class GetData {
-    url;
-    data = null;
-    constructor(newUrl) {
-        this.url = newUrl
-    }
-    async getJson() {
-        await fetch(this.url)
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                this.data = data
-            });
-        return this.data;
-    }
-}
-
-class Renderer {
-    render(whereToRender, whatToRender) {
-        document.querySelector(whereToRender).appendChild(whatToRender);
-    }
-    renderChild(whereToRender, whatToRender, i) {
-        parent = document.querySelector(whereToRender);
-        parent.children[i].appendChild(whatToRender);
-    }
-    renderChildChild(whereToRender, whatToRender, i) {
-        parent = document.querySelector(whereToRender);
-        parent.children[i].children[0].appendChild(whatToRender);
-    }
-}
-
-
-
-
-
-class Main {
-    renderer
-    data
-    frontPage
-    main
-    skills
-    constructor(renderer, data) {
-        this.renderer = renderer;
-        this.data = data;
-
-        this.main = document.createElement("main")
-
-        this.render()
-
-        this.frontPage = new FrontPage(this.renderer, this.data);
-
-        this.skills = new Skills(this.renderer, this.data[0].skills[0])
-
-    }
-    render(){
-        this.renderer.render("body", this.main)
-    }
-
-}
-
 class FrontPage {
     renderer;
     frontpageSection
@@ -189,28 +128,28 @@ class FrontPageMain {
     constructor(renderer, data) {
         this.renderer = renderer;
         this.data = data;
-        
+
         this.main = document.createElement("section");
         this.main.classList.add("frontPage__main");
-        
+
         this.render()
-        this.frontPageImage = new FrontPageImage("left",this.renderer);
-        this.frontPageImage = new FrontPageImage("right",this.renderer);
-        for(let i = 0; i < 2; i++){
+        this.frontPageImage = new FrontPageImage("left", this.renderer);
+        this.frontPageImage = new FrontPageImage("right", this.renderer);
+        for (let i = 0; i < 2; i++) {
             this.frontPageTitle = new FrontPageTitle(i, this.renderer, this.data[i])
         }
 
     }
-    render(){
+    render() {
         this.renderer.render(".frontPage", this.main)
     }
 }
 
-class FrontPageImage{
+class FrontPageImage {
     figure;
     img;
     renderer;
-    constructor(direction, renderer){
+    constructor(direction, renderer) {
         this.renderer = renderer;
         this.direction = direction
 
@@ -223,19 +162,19 @@ class FrontPageImage{
 
         this.render()
     }
-    render(){
+    render() {
         this.renderer.render(".frontPage__main", this.figure);
         this.renderer.render(`.halfSquare--${this.direction}`, this.img)
     }
 }
 
-class FrontPageTitle{
+class FrontPageTitle {
     div;
     h1_1;
     h1_2;
     i;
     renderer;
-    constructor(i, renderer, data){
+    constructor(i, renderer, data) {
         this.i = i;
         this.renderer = renderer
         this.data = data
@@ -254,103 +193,10 @@ class FrontPageTitle{
 
         this.render();
     }
-    render(){
+    render() {
         this.renderer.render(".frontPage__main", this.div)
 
         this.renderer.render(`.frontPage__centerTitle--${this.i}`, this.h1_1)
         this.renderer.render(`.frontPage__centerTitle--${this.i}`, this.h1_2)
     }
 }
-
-
-class Skills{
-    renderer;
-    data;
-    section;
-    header;
-    skillsItems
-    itemWrapper
-    constructor(renderer,data){
-        this.renderer = renderer;
-        this.data = data;
-
-        this.section = document.createElement("section");
-        this.section.classList.add("skills")
-
-        this.header = document.createElement("h2");
-        this.header.classList.add("skills__title");
-        this.header.innerText = "skills"
-
-        this.itemWrapper = document.createElement("section");
-        this.itemWrapper.classList.add("skills__itemsWrapper");
-
-        this.render()
-        
-
-        for(let i = 0; i < Object.keys(this.data.reference[0]).length; i++){
-            this.skillsItems = new SkillsItems(this.data, this.renderer, i);
-
-        }
-
-
-    }
-
-    render(){
-        this.renderer.render("main", this.section)
-        this.renderer.render(".skills", this.header)
-        this.renderer.render(".skills", this.itemWrapper)
-    }
-}
-
-class SkillsItems{
-    section;
-    button;
-    figure;
-    data;
-    renderer;
-    i;
-    img;
-    constructor(data, renderer, i){
-        this.data = data
-        this.renderer = renderer
-        this.i = i
-
-        this.section = document.createElement("section")
-        this.section.classList.add("skills__itemWrapper")
-        this.section.classList.add(`skills__itemWrapper--${this.i}`);
-
-        this.button = document.createElement("button");
-        this.button.classList.add("skills__button");
-        this.button.classList.add(`skills__button--${this.i}`);
-
-        this.figure = document.createElement("figure");
-        this.figure.classList.add("skills__figure");
-
-        this.img = document.createElement("img");
-        this.img.classList.add("skills__img");
-        this.img.setAttribute("src", this.data.image[0][i])
-
-        this.render()
-    }
-    render(){
-        this.renderer.render(".skills__itemsWrapper", this.section)
-        this.renderer.renderChild(".skills__itemsWrapper", this.button, this.i);
-        this.renderer.render(`.skills__button--${this.i}`, this.figure)
-        this.renderer.renderChild(`.skills__button--${this.i}`, this.img, 0)
-    }
-}
-
-class App {
-    api;
-    main;
-    renderer;
-    constructor() {
-        this.api = new GetData("./data/data.json");
-        this.renderer = new Renderer();
-        this.api.getJson().then((data) => {
-            this.main = new Main(this.renderer, data.english)
-        });
-    }
-}
-
-const app = new App();
