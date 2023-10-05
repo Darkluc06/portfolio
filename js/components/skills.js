@@ -13,7 +13,7 @@ class Skills {
         this.data = data;
         this.cleaner = cleaner
 
-        this.section = document.createElement("section");
+        this.section = document.createElement("article");
         this.section.classList.add("skills")
 
         this.header = document.createElement("h2");
@@ -83,7 +83,7 @@ class SkillsItems {
         this.render()
         
         this.skillsModals = new SkillsModal(this.data, this.renderer, this.cleaner, this.wrapper)
-        this.button.addEventListener('click', () => this.skillsModals.create())
+        this.button.addEventListener('click', () => this.skillsModals.create(this.data, this.i))
     }
     render() {
         
@@ -92,51 +92,59 @@ class SkillsItems {
         this.renderer.render(`.skills__button--${this.i}`, this.figure)
         this.renderer.renderChild(`.skills__button--${this.i}`, this.img, 0)
     }
-    hello(){
-        console.log("gello")
-    }
 }
 
 
 class SkillsModal{
     modal;
-    img
-    h2
+    imgq
     p
     exit
     data
     renderer
     wrapper
+    body
     constructor(data,renderer, cleaner, wrapper){
         this.data = data
         this.renderer = renderer
         this.cleaner = cleaner
         this.wrapper = wrapper
+        this.body = document.querySelector("body")
     }
     leave(){
         this.cleaner.clean(".modal__delete")
         this.wrapper.style.display = "none"
+        this.body.style.overflow = ""
     }
 
-    create(){
+    create(data, i){
+        let body = document.querySelector("body")
+        console.log(data.text[0][i])
         this.wrapper.style.display = "block"
         this.modal = document.createElement("section");
         this.modal.classList.add("modal");
+        body.style.overflow = "hidden";
+
+        this.figureWrap = document.createElement("div")
+        this.figureWrap.classList.add("modal__div")
 
         this.figure = document.createElement("figure");
         this.figure.classList.add("modal__figure");
 
         this.img = document.createElement("img");
         this.img.classList.add("modal__img");
+        this.img.setAttribute("src", data.image[0][i])
 
         this.article = document.createElement("article")
         this.article.classList.add("modal__article")
 
         this.h2 = document.createElement("h2");
         this.h2.classList.add("modal__h2");
+        this.h2.innerText = data.reference[0][i]
 
         this.p = document.createElement("p");
         this.p.classList.add("modal__p");
+        this.p.innerText = data.text[0][i]
 
         this.exit = document.createElement("button");
         this.exit.classList.add("modal__exit");
@@ -152,7 +160,9 @@ class SkillsModal{
         this.renderer.render(".modal", this.article)
         this.renderer.render(".modal__article", this.h2)
         this.renderer.render(".modal__article", this.p)
-        this.renderer.render(".modal", this.figure)
+
+        this.renderer.render(".modal", this.figureWrap)
+        this.renderer.render(".modal__div", this.figure)
         this.renderer.render(".modal__figure", this.img)
         this.renderer.render(".modal", this.exit)
     }

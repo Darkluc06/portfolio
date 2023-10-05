@@ -13,7 +13,7 @@
                 {
                     "0": [
                         {
-                            "0": "Fullstack",
+                            "0": "Front End",
                             "1": "Developer"
                         }
                     ],
@@ -31,7 +31,7 @@
                         {
                             "0": "html",
                             "1": "css",
-                            "2": "Js",
+                            "2": "Java script",
                             "3": "Scss",
                             "4": "Php"
                         }
@@ -43,6 +43,43 @@
                             "2": "./img/js.png",
                             "3": "./img/scss.png",
                             "4": "./img/php.png"
+                        }
+                    ],
+                    "text": [
+                        {
+                            "0": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. 0",
+                            "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. 1",
+                            "2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. 2",
+                            "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. 3",
+                            "4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. 4"
+                        }
+                    ]
+                }
+            ],
+            "projects": [
+                {
+                    "reference": [
+                        {
+                            "0": "happines",
+                            "1": "banky",
+                            "2": "cookie",
+                            "3": "eduLock"
+                        }
+                    ],
+                    "image": [
+                        {
+                            "0": "./img/happines.png",
+                            "1": "./img/banky.png",
+                            "2": "./img/cookie.png",
+                            "3": ""
+                        }
+                    ],
+                    "text": [
+                        {
+                            "0": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. ",
+                            "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. ",
+                            "2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. ",
+                            "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ligula et elit maximus aliquet sed congue neque. Proin euismod at libero vel gravida. Suspendisse mattis elit lacus, at gravida est aliquet et. Nullam cursus, diam nec luctus fringilla, risus metus scelerisque metus, vitae placerat ligula libero sit amet metus. Etiam placerat eros id ipsum mollis, at vehicula sapien accumsan. Donec tempus ultrices quam, ut egestas lacus consequat ac. Praesent ullamcorper venenatis feugiat. Etiam lacinia dui nec ipsum sollicitudin consectetur. Cras placerat id ligula et ullamcorper. Morbi a augue rutrum, scelerisque erat fringilla, gravida massa. Aliquam aliquet ex pharetra, facilisis tellus vel, dignissim ligula. Nullam vitae dignissim mi. Integer tempor faucibus viverra. "
                         }
                     ]
                 }

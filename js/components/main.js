@@ -17,6 +17,8 @@ class Main {
 
         this.skills = new Skills(this.renderer, this.data[0].skills[0], this.cleaner)
 
+        this.projects = new Projects(this.renderer ,this.data[0].projects[0])
+
     }
     render() {
         this.renderer.render("body", this.main)
