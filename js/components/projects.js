@@ -42,13 +42,26 @@ class ProjectItem{
         this.renderer = renderer
         this.data = data
         this.i = i
-        console.log("hello")
         this.projectItem = document.createElement("li")
         this.projectItem.classList.add("projects__item")
+
+        this.title = document.createElement("h4");
+        this.title.classList.add("projects__itemTitle")
+        this.title.innerText = this.data.reference[0][this.i]
+
+        this.figure = document.createElement("figure");
+        this.figure.classList.add("projects__itemFigure")
+        
+        this.img = document.createElement("img");
+        this.img.classList.add("projects__itemImg");
+        this.img.setAttribute("src", this.data.image[0][this.i])
         
         this.render()
     }
     render(){
         this.renderer.render(".projects__list", this.projectItem);
+        this.renderer.renderChild(".projects__list", this.title, this.i)
+        this.renderer.renderChild(".projects__list", this.figure, this.i)
+        this.renderer.renderChildChild(".projects__list", this.img, this.i, 1)
     }
 }

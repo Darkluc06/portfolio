@@ -69,24 +69,24 @@ class SkillsItems {
         this.button = document.createElement("button");
         this.button.classList.add("skills__button");
         this.button.classList.add(`skills__button--${this.i}`);
-        
+
         this.figure = document.createElement("figure");
         this.figure.classList.add("skills__figure");
-        
+
         this.img = document.createElement("img");
         this.img.classList.add("skills__img");
 
-        
+
 
         this.img.setAttribute("src", this.data.image[0][i])
-        
+
         this.render()
-        
+
         this.skillsModals = new SkillsModal(this.data, this.renderer, this.cleaner, this.wrapper)
         this.button.addEventListener('click', () => this.skillsModals.create(this.data, this.i))
     }
     render() {
-        
+
         this.renderer.render(".skills__itemsWrapper", this.section)
         this.renderer.renderChild(".skills__itemsWrapper", this.button, this.i);
         this.renderer.render(`.skills__button--${this.i}`, this.figure)
@@ -95,7 +95,7 @@ class SkillsItems {
 }
 
 
-class SkillsModal{
+class SkillsModal {
     modal;
     imgq
     p
@@ -104,26 +104,36 @@ class SkillsModal{
     renderer
     wrapper
     body
-    constructor(data,renderer, cleaner, wrapper){
+    constructor(data, renderer, cleaner, wrapper) {
         this.data = data
         this.renderer = renderer
         this.cleaner = cleaner
         this.wrapper = wrapper
         this.body = document.querySelector("body")
+
     }
-    leave(){
+    leave() {
+        let frontpage = document.querySelector(".frontPage")
+        let projects = document.querySelector(".projects")
         this.cleaner.clean(".modal__delete")
         this.wrapper.style.display = "none"
         this.body.style.overflow = ""
+        frontpage.style.display = ""
+        projects.style.display = ""
+        
     }
 
-    create(data, i){
-        let body = document.querySelector("body")
+    create(data, i) {
         console.log(data.text[0][i])
+        let frontpage = document.querySelector(".frontPage")
+        let projects = document.querySelector(".projects")
         this.wrapper.style.display = "block"
         this.modal = document.createElement("section");
         this.modal.classList.add("modal");
-        body.style.overflow = "hidden";
+
+        this.body.style.overflow = "hidden";
+        frontpage.style.display = "none"
+        projects.style.display = "none"
 
         this.figureWrap = document.createElement("div")
         this.figureWrap.classList.add("modal__div")
@@ -153,9 +163,9 @@ class SkillsModal{
         this.render()
 
     }
-    render(){
-        
-        
+    render() {
+
+
         this.renderer.render(".modal__delete", this.modal)
         this.renderer.render(".modal", this.article)
         this.renderer.render(".modal__article", this.h2)

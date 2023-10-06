@@ -24,9 +24,9 @@ class Renderer {
         parent = document.querySelector(whereToRender);
         parent.children[i].appendChild(whatToRender);
     }
-    renderChildChild(whereToRender, whatToRender, i) {
+    renderChildChild(whereToRender, whatToRender, i, posistion = 0) {
         parent = document.querySelector(whereToRender);
-        parent.children[i].children[0].appendChild(whatToRender);
+        parent.children[i].children[posistion].appendChild(whatToRender);
     }
 }
 

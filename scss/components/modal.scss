@@ -8,6 +8,7 @@
     position: relative;
     box-shadow: inset 1rem -1rem 2rem 1rem rgba($color: #000000, $alpha: 0.3);
     display: flex;
+    z-index: 9999999999;
     background: #833ab4; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
