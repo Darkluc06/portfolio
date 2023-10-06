@@ -1,16 +1,39 @@
 .projects{
     width: 100vw;
-    height: 80vh;
+    height: 160vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 10rem; 
+    position: relative;
     &__title {
         text-shadow: -0.2rem 0.2rem rgba($color: #000000, $alpha: 0.3);
         font-family: "Asus Rog", "Ubuntu", sans-serif;
         font-weight: 500;
         font-size: 300%;
         color: white;
-        padding-top: 10rem;
+        
     }
-    
+    &__section{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    &__list{
+        width: 100%;
+        height: 100%;
+        padding: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5%;
+    }
+    &__item{
+        height: 45%;
+        width: 45%;
+        background: white;
+        border-radius: 2rem;
+        list-style: none;
+    }
 }

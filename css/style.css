@@ -161,6 +161,9 @@ body {
   height: 100%;
   width: 100%;
 }
+.halfSquare--projects {
+  padding: 4rem;
+}
 
 .skills {
   height: 65rem;
@@ -377,10 +380,12 @@ body {
 
 .projects {
   width: 100vw;
-  height: 80vh;
+  height: 160vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 10rem;
+  position: relative;
 }
 .projects__title {
   text-shadow: -0.2rem 0.2rem rgba(0, 0, 0, 0.3);
@@ -388,7 +393,28 @@ body {
   font-weight: 500;
   font-size: 300%;
   color: white;
-  padding-top: 10rem;
+}
+.projects__section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.projects__list {
+  width: 100%;
+  height: 100%;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.projects__item {
+  height: 45%;
+  width: 45%;
+  background: white;
+  border-radius: 2rem;
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

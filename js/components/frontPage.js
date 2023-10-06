@@ -133,8 +133,8 @@ class FrontPageMain {
         this.main.classList.add("frontPage__main");
 
         this.render()
-        this.frontPageImage = new FrontPageImage("left", this.renderer);
-        this.frontPageImage = new FrontPageImage("right", this.renderer);
+        this.frontPageImage = new FrontPageImage("left", this.renderer, ".frontPage__main",0);
+        this.frontPageImage = new FrontPageImage("right", this.renderer, ".frontPage__main",1);
         for (let i = 0; i < 2; i++) {
             this.frontPageTitle = new FrontPageTitle(i, this.renderer, this.data[i])
         }
@@ -149,13 +149,17 @@ class FrontPageImage {
     figure;
     img;
     renderer;
-    constructor(direction, renderer) {
+    i
+    constructor(direction, renderer, whereToRender, i, projects) {
         this.renderer = renderer;
         this.direction = direction
+        this.whereToRender = whereToRender
+        this.i = i
+        this.projects = projects
 
         this.figure = document.createElement("figure");
         this.figure.classList.add("halfSquare")
-        this.figure.classList.add(`halfSquare--${this.direction}`)
+        this.figure.classList.add(`halfSquare--${this.direction}`, `halfSquare--${this.projects}`)
 
         this.img = document.createElement("img");
         this.img.setAttribute("src", `./img/sqaureShape(${direction}).png`);
@@ -163,8 +167,8 @@ class FrontPageImage {
         this.render()
     }
     render() {
-        this.renderer.render(".frontPage__main", this.figure);
-        this.renderer.render(`.halfSquare--${this.direction}`, this.img)
+        this.renderer.render(`${this.whereToRender}`, this.figure);
+        this.renderer.renderChild(`${this.whereToRender}`, this.img, this.i)
     }
 }
 
