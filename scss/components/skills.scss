@@ -59,7 +59,6 @@
         cursor: pointer;
         &:hover{
             transform: scale(1.15);
-            filter: blur(0);
         }
         &:before {
             content: "";

@@ -9,7 +9,6 @@ class Projects{
         this.data = data
         this.projects = document.createElement("article");
         this.projects.classList.add("projects");
-        console.log(this.data )
 
         this.title = document.createElement("h2");
         this.title.classList.add("projects__title");
@@ -49,19 +48,36 @@ class ProjectItem{
         this.title.classList.add("projects__itemTitle")
         this.title.innerText = this.data.reference[0][this.i]
 
-        this.figure = document.createElement("figure");
-        this.figure.classList.add("projects__itemFigure")
+        this.text = document.createElement("p");
+        this.text.classList.add("projects__itemText");
+        this.text.innerText = this.data.text[0][this.i]
+
+        if(this.data.image[0][this.i] === ""){
+            this.renderNoImage()
+        }
+        else{
+            this.figure = document.createElement("figure");
+            this.figure.classList.add("projects__itemFigure")
+            
+            this.img = document.createElement("img");
+            this.img.classList.add("projects__itemImg");
+            this.img.setAttribute("src", this.data.image[0][this.i])
+            
+            this.render()
+        }
+
         
-        this.img = document.createElement("img");
-        this.img.classList.add("projects__itemImg");
-        this.img.setAttribute("src", this.data.image[0][this.i])
-        
-        this.render()
+    }
+    renderNoImage(){
+        this.renderer.render(".projects__list", this.projectItem);
+        this.renderer.renderChild(".projects__list", this.title, this.i)
+        this.renderer.renderChild(".projects__list", this.text, this.i)
     }
     render(){
         this.renderer.render(".projects__list", this.projectItem);
         this.renderer.renderChild(".projects__list", this.title, this.i)
         this.renderer.renderChild(".projects__list", this.figure, this.i)
         this.renderer.renderChildChild(".projects__list", this.img, this.i, 1)
+        this.renderer.renderChild(".projects__list", this.text, this.i)
     }
 }

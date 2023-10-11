@@ -4,6 +4,7 @@ class Main {
     frontPage
     main
     skills
+    aboutMe
     constructor(renderer, data, cleaner) {
         this.renderer = renderer;
         this.data = data;
@@ -18,7 +19,8 @@ class Main {
         this.skills = new Skills(this.renderer, this.data[0].skills[0], this.cleaner)
 
         this.projects = new Projects(this.renderer ,this.data[0].projects[0])
-
+        this.aboutMe = new AboutMe(this.renderer ,this.data[0].about[0])
+        
     }
     render() {
         this.renderer.render("body", this.main)
