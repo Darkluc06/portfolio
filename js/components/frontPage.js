@@ -12,7 +12,7 @@ class FrontPage {
         this.frontpageSection.classList.add("frontPage");
         this.render();
 
-        this.aside = new Aside(this.frontpageSection, this.renderer, this.data[0].headers[0]);
+        this.aside = new Aside(this.frontpageSection, this.renderer, this.data[0].headers[0], this.data[0].reference[0]);
 
         this.frontPageMain = new FrontPageMain(this.renderer, this.data[0].title[0]);
     }
@@ -33,10 +33,11 @@ class Aside {
     logoLink;
     logoImg;
     navData
-    constructor(frontpageSection, renderer, navData) {
+    constructor(frontpageSection, renderer, navData, reference) {
         this.frontpageSection = frontpageSection;
         this.renderer = renderer;
         this.navData = navData
+        this.reference = reference
 
 
 
@@ -46,7 +47,7 @@ class Aside {
 
 
         for (let i = 0; i < Object.keys(this.navData).length; i++) {
-            this.asideItem = new AsideItem(this.renderer, this.navData[i], i);
+            this.asideItem = new AsideItem(this.renderer, this.navData[i], i, this.reference);
         }
 
     }
@@ -89,10 +90,11 @@ class AsideItem {
     text;
     renderer;
     i;
-    constructor(renderer, data, i) {
+    constructor(renderer, data, i, reference) {
         this.renderer = renderer;
         this.data = data
         this.i = i
+        this.reference = reference
         this.elementsCreate()
         this.render()
     }
@@ -109,6 +111,11 @@ class AsideItem {
         this.text = document.createElement("h3");
         this.text.classList.add("frontPage__navText");
         this.text.innerText = this.data
+
+        this.item.addEventListener("click", () =>  {
+            this.element = document.querySelector(`.${this.reference[this.i]}`)
+            this.element.scrollIntoView({ behavior: "smooth" });
+        });
     }
 
     render() {

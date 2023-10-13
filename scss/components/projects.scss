@@ -1,6 +1,6 @@
 .projects{
     width: 100vw;
-    height: 180vh;
+    height: 230vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -30,7 +30,7 @@
         gap: 5%;
     }
     &__item{
-        height: 45%;
+        height: 30%;
         width: 45%;
         background: white;
         border-radius: 2rem;

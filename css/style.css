@@ -380,7 +380,7 @@ body {
 
 .projects {
   width: 100vw;
-  height: 180vh;
+  height: 230vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -410,7 +410,7 @@ body {
   gap: 5%;
 }
 .projects__item {
-  height: 45%;
+  height: 30%;
   width: 45%;
   background: white;
   border-radius: 2rem;
@@ -480,6 +480,12 @@ body {
 .about__figure {
   width: 30%;
   background: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .skills__itemsWrapper {
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

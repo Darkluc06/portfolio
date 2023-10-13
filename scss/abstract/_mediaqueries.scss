@@ -1,3 +1,5 @@
-@media screen and (max-width) {
-    
+@media screen and (max-width: 1300px) {
+    .skills__itemsWrapper{
+        flex-wrap: wrap;
+    }
 }
