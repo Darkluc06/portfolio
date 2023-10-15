@@ -37,7 +37,7 @@
         padding: 0;
         height: 400vh;
         &__list{
-            gap: 4rem;
+            gap: 2rem;
         }
         &__item{
             width: 100%;
@@ -48,9 +48,55 @@
             }
         }
     }
+    .about{
+        &__section{
+            flex-direction: column;
+        }
+        &__textWrapper{
+            padding: 2rem;
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 43.75rem) {
+    .frontPage{
+        flex-direction: column;
+        min-height: fit-content;
+        &__aside{
+            width: 100%;
+            height: fit-content;
+            flex-direction: row;
+        }
+        &__nav{
+            flex-direction: row;
+            padding: 2rem;
+            flex-wrap: wrap;
+            &Sphere{
+                display: none;
+            }
+            &Text{
+                font-size: 100%;
+            }
+            &Item{
+                height: fit-content;
+            }
+        }
+        &__logo{
+            width: 10vw;
+            height: 10vw;
+            padding: 0;
+        }
+        &__main{
+            width: 100vw;
+        }
+    }
+    .halfSquare{
+        padding: 0;
+        &--undefined{
+            height: 20rem;
+        }
+    }
     .skills{
         height: 242rem;
         &__itemsWrapper{
@@ -80,6 +126,11 @@
                 bottom: 0%;
                 left: 0%;
             }
+        }
+    }
+    .projects{
+        &__list{
+            padding: 2rem;
         }
     }
 }
