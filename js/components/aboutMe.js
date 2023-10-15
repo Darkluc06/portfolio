@@ -33,6 +33,7 @@ class AboutMe{
 
         this.img = document.createElement("img")
         this.img.classList.add("about__img")
+        this.img.setAttribute("src", "./img/pollyLuc.jpg")
 
         this.render()
 

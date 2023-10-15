@@ -106,7 +106,6 @@
         }
         &__figure{
             margin: 2rem;
-            width: 90%;
             height: 50vh;
         }
     }
@@ -165,6 +164,11 @@
         }
         &__list{
             padding: 2rem;
+        }
+    }
+    .about{
+        &__figure{
+            width: 80%;
         }
     }
 }

@@ -139,6 +139,22 @@ body {
   height: 100%;
   z-index: -1;
 }
+.frontPage__languages {
+  display: flex;
+}
+.frontPage__language {
+  all: unset;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 5rem;
+  width: 5rem;
+  color: black;
+  border-radius: 40% 20% 40% 20%;
+  cursor: pointer;
+}
 
 .halfSquare {
   position: absolute;
@@ -481,6 +497,11 @@ body {
   width: 30%;
   background: white;
 }
+.about__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 @media screen and (max-width: 81.5rem) {
   .frontPage {
@@ -588,7 +609,6 @@ body {
   }
   .about__figure {
     margin: 2rem;
-    width: 90%;
     height: 50vh;
   }
 }
@@ -645,6 +665,9 @@ body {
   }
   .projects__list {
     padding: 2rem;
+  }
+  .about__figure {
+    width: 80%;
   }
 }
 

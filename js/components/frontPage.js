@@ -5,14 +5,16 @@ class FrontPage {
     aside;
     data
 
-    constructor(renderer, data) {
+    constructor(renderer, data, app, cleaner) {
         this.renderer = renderer;
         this.data = data
+        this.app = app
+        this.cleaner = cleaner
         this.frontpageSection = document.createElement("section");
         this.frontpageSection.classList.add("frontPage");
         this.render();
 
-        this.aside = new Aside(this.frontpageSection, this.renderer, this.data[0].headers[0], this.data[0].reference[0]);
+        this.aside = new Aside(this.frontpageSection, this.renderer, this.data[0].headers[0], this.data[0].reference[0], this.app, this.cleaner);
 
         this.frontPageMain = new FrontPageMain(this.renderer, this.data[0].title[0]);
     }
@@ -33,19 +35,18 @@ class Aside {
     logoLink;
     logoImg;
     navData
-    constructor(frontpageSection, renderer, navData, reference) {
+    exit
+    constructor(frontpageSection, renderer, navData, reference, app, cleaner) {
         this.frontpageSection = frontpageSection;
         this.renderer = renderer;
         this.navData = navData
         this.reference = reference
-
-
+        this.app = app
+        this.cleaner = cleaner
 
         this.elementsCreate();
         this.logoCreate();
         this.render();
-
-
         for (let i = 0; i < Object.keys(this.navData).length; i++) {
             this.asideItem = new AsideItem(this.renderer, this.navData[i], i, this.reference);
         }
@@ -58,6 +59,21 @@ class Aside {
 
         this.ul = document.createElement("ul");
         this.ul.classList.add("frontPage__nav");
+
+        this.language = document.createElement("div");
+        this.language.classList.add("frontPage__languages")
+
+        this.en = document.createElement("button");
+        this.en.classList.add("frontPage__language");
+        this.en.classList.add("frontPage__language--en");
+        this.en.innerText = "EN"
+        this.en.addEventListener("click", () => this.english())
+
+        this.nl = document.createElement("button");
+        this.nl.classList.add("frontPage__language");
+        this.nl.classList.add("frontPage__language--nl");
+        this.nl.innerText = "NL"
+        this.nl.addEventListener("click", () => this.nederlands())
     }
 
     logoCreate() {
@@ -70,6 +86,14 @@ class Aside {
         this.logoImg.setAttribute("src", "./img/luc's logo.png");
         this.logoImg.setAttribute("alt", "logo for Luc's portfolio resembling the first letters of the name Luc Zuidema(LZ)");
     }
+    english(){
+        this.cleaner.clean("body")
+        this.app = new App("english")
+    }
+    nederlands(){
+        this.cleaner.clean("body")
+        this.app = new App("nederlands")
+    }
 
 
 
@@ -78,6 +102,9 @@ class Aside {
         this.renderer.render(".frontPage__aside", this.logoButton)
         this.renderer.render(".frontPage__logo", this.logoLink)
         this.renderer.render(".frontPage__logoLink", this.logoImg)
+        this.renderer.render(".frontPage__aside", this.language)
+        this.renderer.render(".frontPage__languages", this.en)
+        this.renderer.render(".frontPage__languages", this.nl)
         this.renderer.render(".frontPage__aside", this.ul);
     }
 }

@@ -5,16 +5,17 @@ class Main {
     main
     skills
     aboutMe
-    constructor(renderer, data, cleaner) {
+    constructor(renderer, data, cleaner, app) {
         this.renderer = renderer;
         this.data = data;
         this.cleaner = cleaner
+        this.app = app
 
         this.main = document.createElement("main")
 
         this.render()
 
-        this.frontPage = new FrontPage(this.renderer, this.data);
+        this.frontPage = new FrontPage(this.renderer, this.data, this.app, this.cleaner);
 
         this.skills = new Skills(this.renderer, this.data[0].skills[0], this.cleaner)
 
@@ -34,12 +35,13 @@ class App {
     api;
     main;
     renderer;
-    constructor() {
+    constructor(language = "nederlands") {
+        this.language = language
         this.api = new GetData("./data/data.json");
         this.renderer = new Renderer();
         this.cleaner = new Cleaner();
         this.api.getJson().then((data) => {
-            this.main = new Main(this.renderer, data.nederlands, this.cleaner)
+            this.main = new Main(this.renderer, data[language], this.cleaner, this)
         });
     }
 }

@@ -97,7 +97,7 @@ class SkillsItems {
 
 class SkillsModal {
     modal;
-    imgq
+    img
     p
     exit
     data

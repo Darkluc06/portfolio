@@ -125,4 +125,21 @@
         height: 100%;
         z-index: -1;
     }
+    &__languages{
+        display: flex;
+    }
+    &__language{
+        all: unset;
+        margin-left: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        height: 5rem;
+        width: 5rem;
+        color: black;
+        border-radius: 40% 20% 40% 20%;
+        cursor: pointer;
+    }
+    
 }
