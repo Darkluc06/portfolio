@@ -39,7 +39,7 @@ class App {
         this.renderer = new Renderer();
         this.cleaner = new Cleaner();
         this.api.getJson().then((data) => {
-            this.main = new Main(this.renderer, data.english, this.cleaner)
+            this.main = new Main(this.renderer, data.nederlands, this.cleaner)
         });
     }
 }
