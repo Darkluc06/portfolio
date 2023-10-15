@@ -533,10 +533,16 @@ body {
   }
   .about__section {
     flex-direction: column;
+    align-items: center;
   }
   .about__textWrapper {
     padding: 2rem;
     width: 100%;
+  }
+  .about__figure {
+    margin: 2rem;
+    width: 90%;
+    height: 50vh;
   }
 }
 @media screen and (max-width: 43.75rem) {
