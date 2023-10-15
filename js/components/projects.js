@@ -12,7 +12,7 @@ class Projects{
 
         this.title = document.createElement("h2");
         this.title.classList.add("projects__title");
-        this.title.innerText = "Projects"
+        this.title.innerText = this.data.title
 
         this.section = document.createElement("section");
         this.section.classList.add("projects__section")
