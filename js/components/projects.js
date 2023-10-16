@@ -52,6 +52,12 @@ class ProjectItem{
         this.text.classList.add("projects__itemText");
         this.text.innerText = this.data.text[0][this.i]
 
+        this.githubLink = document.createElement("a")
+        this.githubLink.classList.add("projects__itemText")
+        this.githubLink.classList.add("projects__itemText--link")
+        this.githubLink.innerText = "Github"
+        this.githubLink.href = data.link[0][this.i]
+
         if(this.data.image[0][this.i] === ""){
             this.renderNoImage()
         }
@@ -79,5 +85,6 @@ class ProjectItem{
         this.renderer.renderChild(".projects__list", this.figure, this.i)
         this.renderer.renderChildChild(".projects__list", this.img, this.i, 1)
         this.renderer.renderChild(".projects__list", this.text, this.i)
+        this.renderer.renderChild(".projects__list", this.githubLink, this.i)
     }
 }

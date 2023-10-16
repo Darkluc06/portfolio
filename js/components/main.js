@@ -21,6 +21,7 @@ class Main {
 
         this.projects = new Projects(this.renderer ,this.data[0].projects[0])
         this.aboutMe = new AboutMe(this.renderer ,this.data[0].about[0])
+        this.contact = new Contact(this.renderer)
         
     }
     render() {

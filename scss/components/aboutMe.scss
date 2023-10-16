@@ -1,9 +1,9 @@
 .about{
     margin-top: 6rem;
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 15rem;
 
     &__title{
         text-shadow: -0.2rem 0.2rem rgba($color: #000000, $alpha: 0.3);

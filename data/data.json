@@ -66,6 +66,7 @@
             ],
             "projects": [
                 {
+                    "title": "projects",
                     "reference": [
                         {
                             "0": "collection of happines",
@@ -91,6 +92,15 @@
                             "2": "Cookie clicker was my first project using OOP in JS. We learned how to make repeating objects and how to create classes while rendering all elements inside of JS. Each button has its own functionality and the peak of all is the save button which saves the current score and the used abilities inside the local storage to ensure the same score every time you load.",
                             "3": "EduLock is a new company founded by 4 friends. Currently we are working on collecting data for this projects and dividing tasks among the team. We consist out of 2 front-end developers and 2 back-end developers. Currently I’m a front-end developer and the project manager to ensure everyone is up to date with the current task at hand. We are not an official company yet. But soon we will hand in our idea at the KVK.",
                             "4": "Doesburg coaching was a projects designed for “Cindy Doesburg”. she has a company designed for helping workers to get out of burnouts or other mentals problems to get back into the working field. She gave four separate exercises she hands out on paper which she wanted “digitalized”. These were made in a group of four existing of Jacob, Milou, Nabil and Me(Luc). These were all made using the same coding style as cookie clicker and Banky using OOP and rendering items in JS. the above image is one of the four excersises we made"
+                        }
+                    ],
+                    "link": [
+                        {
+                            "0": "https://github.com/Darkluc05/collection-of-happines",
+                            "1": "https://github.com/Darkluc05/Programming-2.3/tree/main/les7-8%20-%20Banky",
+                            "2": "https://github.com/Darkluc05/Programming-2.3/tree/main/les1-2-5-cookie%20clicker",
+                            "3": "",
+                            "4": "https://github.com/Milouyg/Coaching" 
                         }
                     ]
                 }
@@ -196,6 +206,15 @@
                             "2": "Cookie Clicker was mijn eerste project waarin ik OOP in JS gebruikte. We leerden hoe we herhaalde objecten konden maken en hoe we klassen konden aanmaken terwijl we alle elementen in JS rendeerden. Elke knop heeft zijn eigen functionaliteit, en het hoogtepunt is de opslaan-knop waarmee de huidige score en gebruikte mogelijkheden in de lokale opslag worden opgeslagen om dezelfde score te behouden wanneer je de pagina opnieuw laadt.",
                             "3": "EduLock is een nieuw bedrijf opgericht door 4 vrienden. Momenteel werken we aan het verzamelen van gegevens voor dit project en verdelen we taken binnen het team. We bestaan uit 2 front-end ontwikkelaars en 2 back-end ontwikkelaars. Momenteel ben ik een front-end ontwikkelaar en de projectmanager om ervoor te zorgen dat iedereen op de hoogte is van de huidige taak. We zijn nog geen officieel bedrijf, maar binnenkort dienen we ons idee in bij de KVK.",
                             "4": "Doesburg Coaching was een project ontworpen voor \"Cindy Doesburg\". Ze heeft een bedrijf dat werknemers helpt om uit burn-outs of andere mentale problemen te komen, zodat ze weer aan het werk kunnen. Ze gaf vier afzonderlijke oefeningen die ze op papier uitdeelde en die ze \"gedigitaliseerd\" wilde hebben. Deze werden gemaakt in een groep van vier, bestaande uit Jacob, Milou, Nabil en ik (Luc). Deze werden allemaal gemaakt met dezelfde coderingsstijl als Cookie Clicker en Banky, waarbij OOP werd gebruikt en items in JS werden weergegeven."
+                        }
+                    ],
+                    "link": [
+                        {
+                            "0": "https://github.com/Darkluc05/collection-of-happines",
+                            "1": "https://github.com/Darkluc05/Programming-2.3/tree/main/les7-8%20-%20Banky",
+                            "2": "https://github.com/Darkluc05/Programming-2.3/tree/main/les1-2-5-cookie%20clicker",
+                            "3": "",
+                            "4": "https://github.com/Milouyg/Coaching" 
                         }
                     ]
                 }

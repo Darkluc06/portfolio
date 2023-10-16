@@ -1,0 +1,28 @@
+.contact{
+    height: 15rem;
+    width: 100vw;
+    background: #3B3B3B;
+    &__title{
+        padding-left: 2rem;
+        color: white;
+        font-size: 200%;
+    }
+    &__list{
+        padding-left: 2rem;
+        padding-top: 2rem;
+        display: flex;
+        gap: 4rem;
+    }
+    &__item{
+        height: 8rem;
+        width: 8rem;
+        cursor: pointer;
+        list-style: none;
+        &>i{
+            color: white;
+            height: 100%;
+            width: 100%;
+            font-size: 300%;
+        }
+    }
+}

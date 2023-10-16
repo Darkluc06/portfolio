@@ -68,6 +68,10 @@
             text-shadow: -0.2rem 0.2rem rgba($color: #eee, $alpha: 1);
             font-family: "Ubuntu", sans-serif;
             font-size: 80%;
+            &--link{
+                color: blue;
+                cursor: pointer;
+            }
         }
     }
 }

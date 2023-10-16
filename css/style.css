@@ -21,6 +21,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  position: relative;
+}
+
 .frontPage {
   min-height: 100vh;
   width: 100vw;
@@ -464,13 +468,17 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 80%;
 }
+.projects__itemText--link {
+  color: blue;
+  cursor: pointer;
+}
 
 .about {
   margin-top: 6rem;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 15rem;
 }
 .about__title {
   text-shadow: -0.2rem 0.2rem rgba(0, 0, 0, 0.3);
@@ -501,6 +509,35 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.contact {
+  height: 15rem;
+  width: 100vw;
+  background: #3B3B3B;
+}
+.contact__title {
+  padding-left: 2rem;
+  color: white;
+  font-size: 200%;
+}
+.contact__list {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  gap: 4rem;
+}
+.contact__item {
+  height: 8rem;
+  width: 8rem;
+  cursor: pointer;
+  list-style: none;
+}
+.contact__item > i {
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-size: 300%;
 }
 
 @media screen and (max-width: 81.5rem) {
