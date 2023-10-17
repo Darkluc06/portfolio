@@ -1,6 +1,6 @@
 .projects{
     width: 100vw;
-    height: 230vh;
+    height: 280vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -39,9 +39,9 @@
         flex-direction: column;
         align-items: center;
         z-index: 5;
-        transition: 0.8s ease-out;
+        transition: 0.4s ease-out;
         &:hover{
-            transform: scale(1.1);
+            transform: scale(1.02);
         }
         &Title{
             height: 10%;
@@ -71,6 +71,18 @@
             &--link{
                 color: blue;
                 cursor: pointer;
+            }
+        }
+    }
+    &__data{
+        &List{
+            padding: 1rem;
+            padding-left: 2rem;
+            background: #eee;
+            box-shadow: -1rem 1rem 2rem 0 rgba($color: #000000, $alpha: 0.3);
+            border-radius: 1rem;
+            &Item{
+
             }
         }
     }

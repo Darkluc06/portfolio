@@ -2,20 +2,28 @@
     height: 15rem;
     width: 100vw;
     background: #3B3B3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &__title{
-        padding-left: 2rem;
         color: white;
         font-size: 200%;
+        width: 28rem;
+        display: flex;
     }
     &__list{
-        padding-left: 2rem;
         padding-top: 2rem;
         display: flex;
-        gap: 4rem;
+        gap: 2rem;
+        justify-content: center;
     }
     &__item{
         height: 8rem;
         width: 8rem;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         list-style: none;
         &>i{
@@ -23,6 +31,9 @@
             height: 100%;
             width: 100%;
             font-size: 300%;
+            justify-content: center;
+        align-items: center;
+        justify-content: center;
         }
     }
 }

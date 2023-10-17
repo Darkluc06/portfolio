@@ -79,7 +79,7 @@ class Aside {
     logoCreate() {
         this.logoButton = document.createElement("button")
         this.logoButton.classList.add("frontPage__logo")
-        this.logoLink = document.createElement("a")
+        this.logoLink = document.createElement("figure")
         this.logoLink.classList.add("frontPage__logoLink")
         this.logoImg = document.createElement("img")
         this.logoImg.classList.add("frontPage__logoImg")
@@ -197,6 +197,7 @@ class FrontPageImage {
 
         this.img = document.createElement("img");
         this.img.setAttribute("src", `./img/sqaureShape(${direction}).png`);
+        this.img.setAttribute("alt", "bright halfsquare for a nice visual")
 
         this.render()
     }

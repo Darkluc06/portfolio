@@ -102,13 +102,56 @@
                             "3": "",
                             "4": "https://github.com/Milouyg/Coaching" 
                         }
+                    ],
+                    "alt": [
+                        {
+                            "0": "",
+                            "1": "",
+                            "2": "",
+                            "3": "",
+                            "4": "" 
+                        }
+                    ],
+                    "info": [
+                        {
+                            "0": [
+                                {
+                                    "0": "team: Luc",
+                                    "1": "time: 3 Weeks"
+                                }
+                            ],
+                            "1": [
+                                {
+                                    "0": "team: Luc",
+                                    "1": "time: 2 Weeks"
+                                }
+                            ],
+                            "2": [
+                                {
+                                    "0": "team: Luc",
+                                    "1": "time: 2 Weeks"
+                                }
+                            ],
+                            "3": [
+                                {
+                                    "0": "team: Luc, Daniel, Eugene, Oscar",
+                                    "1": "time: Onbekend"
+                                }
+                            ],
+                            "4": [
+                                {
+                                    "0": "team: Luc, Nabil, Jacob, Milou",
+                                    "1": "time: 2 Months"
+                                }
+                            ] 
+                        }
                     ]
                 }
             ],
             "about": [
                 {
                     "title": "About me",
-                    "text": "I am a driven and ambitious individual, currently pursuing my academic journey as a student with a passion for web development. Fluent in both English and Dutch, I possess the unique ability to navigate seamlessly between these languages, enabling effective communication and collaboration in diverse, global settings.In my educational path, I've demonstrated my commitment to excellence by accelerating my progress through school. Skipping a year during my MBO studies, I showcased my dedication to learning and my ability to grasp complex concepts quickly. This ambition and determination are central to my approach to all aspects of my life.My skill set extends beyond web development. I have a knack for management and a proficiency in applying agile methodologies, particularly in the use of SCRUM. I have a natural aptitude for organizing tasks, setting priorities, and leading teams to success. My ability to effectively manage projects and teams complements my technical prowess, making me a well-rounded professional.My primary focus in web development has been on the frontend, where I have honed my skills to create engaging, intuitive, and responsive user interfaces using HTML, CSS, JavaScript, and frameworks like React. However, my true passion extends to backend development, where I aspire to delve deeper into server-side technologies and databases. My insatiable curiosity and commitment to growth drive me to continually expand my knowledge and apply it in practical contexts.I envision myself as an integral part of an innovative tech team, combining my frontend and backend skills to develop high-quality web applications. My goal is to contribute to the ever-evolving digital landscape, leveraging my technical expertise, management acumen, and the power of SCRUM to deliver exceptional results.As I continue on my journey in the tech industry, I am excited about the opportunities to learn, grow, and make a meaningful impact. My dedication, language proficiency, accelerated learning, and versatile skill set position me as a well-rounded and forward-thinking professional ready to take on the challenges of the digital world."
+                    "text": "I'm a passionate and ambitious student, proficient in both English and Dutch, with a keen interest in web development. My commitment to excellence led me to accelerate through my educational journey, even skipping a year during my MBO studies, showcasing my dedication and quick learning abilities. Beyond web development, I excel in project management and agile methodologies like SCRUM. My focus has primarily been on frontend development, specializing in creating intuitive, responsive interfaces with HTML, CSS, JavaScript, and React. However, my true passion lies in backend development and server-side technologies. I envision myself as an integral part of an innovative tech team, combining frontend and backend skills to create high-quality web applications. With my dedication, proficiency, and versatility, I'm prepared to make a meaningful impact in the ever-evolving digital landscape."
                 }
             ]
         }
@@ -216,13 +259,47 @@
                             "3": "",
                             "4": "https://github.com/Milouyg/Coaching" 
                         }
+                    ],
+                    "info": [
+                        {
+                            "0": [
+                                {
+                                    "0": "team: Luc",
+                                    "1": "tijd: 3 Weken"
+                                }
+                            ],
+                            "1": [
+                                {
+                                    "0": "team: Luc",
+                                    "1": "tijd: 2 Weken"
+                                }
+                            ],
+                            "2": [
+                                {
+                                    "0": "team: Luc",
+                                    "1": "tijd: 2 Weken"
+                                }
+                            ],
+                            "3": [
+                                {
+                                    "0": "team: Luc, Daniel, Eugene, Oscar",
+                                    "1": "tijd: Onbekend"
+                                }
+                            ],
+                            "4": [
+                                {
+                                    "0": "team: Luc, Nabil, Jacob, Milou",
+                                    "1": "tijd: 2 Maanden"
+                                }
+                            ] 
+                        }
                     ]
                 }
             ],
             "about": [
                 {
                     "title": "Over mij",
-                    "text": "I am a driven and ambitious individual, currently pursuing my academic journey as a student with a passion for web development. Fluent in both English and Dutch, I possess the unique ability to navigate seamlessly between these languages, enabling effective communication and collaboration in diverse, global settings.In my educational path, I've demonstrated my commitment to excellence by accelerating my progress through school. Skipping a year during my MBO studies, I showcased my dedication to learning and my ability to grasp complex concepts quickly. This ambition and determination are central to my approach to all aspects of my life.My skill set extends beyond web development. I have a knack for management and a proficiency in applying agile methodologies, particularly in the use of SCRUM. I have a natural aptitude for organizing tasks, setting priorities, and leading teams to success. My ability to effectively manage projects and teams complements my technical prowess, making me a well-rounded professional.My primary focus in web development has been on the frontend, where I have honed my skills to create engaging, intuitive, and responsive user interfaces using HTML, CSS, JavaScript, and frameworks like React. However, my true passion extends to backend development, where I aspire to delve deeper into server-side technologies and databases. My insatiable curiosity and commitment to growth drive me to continually expand my knowledge and apply it in practical contexts.I envision myself as an integral part of an innovative tech team, combining my frontend and backend skills to develop high-quality web applications. My goal is to contribute to the ever-evolving digital landscape, leveraging my technical expertise, management acumen, and the power of SCRUM to deliver exceptional results.As I continue on my journey in the tech industry, I am excited about the opportunities to learn, grow, and make a meaningful impact. My dedication, language proficiency, accelerated learning, and versatile skill set position me as a well-rounded and forward-thinking professional ready to take on the challenges of the digital world."
+                    "text": "Ik ben een gepassioneerde en ambitieuze student, bedreven in zowel het Engels als het Nederlands, met een sterke interesse in webontwikkeling. Mijn streven naar excellentie heeft me aangespoord om mijn educatieve traject te versnellen, zelfs door een jaar over te slaan tijdens mijn MBO-studies, wat mijn toewijding en snelle leervaardigheden illustreert. Buiten webontwikkeling ben ik uitblinkend in projectmanagement en agile methodologieën zoals SCRUM. Mijn focus lag voornamelijk op frontend-ontwikkeling, waarin ik me specialiseerde in het creëren van intuïtieve, responsieve interfaces met HTML, CSS, JavaScript en React. Maar mijn ware passie ligt in backend-ontwikkeling en server-side technologieën. Ik zie mezelf als een integraal onderdeel van een innovatief techteam, waarin ik mijn frontend- en backend-vaardigheden combineer om hoogwaardige webtoepassingen te creëren. Met mijn toewijding, bekwaamheid en veelzijdigheid ben ik klaar om een betekenisvolle impact te maken in het steeds veranderende landschap."
                 }
             ]
         }

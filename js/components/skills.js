@@ -75,7 +75,7 @@ class SkillsItems {
 
         this.img = document.createElement("img");
         this.img.classList.add("skills__img");
-
+        this.img.setAttribute("alt", `an image of the logo of ${this.data.reference[0][this.i]}`)
 
 
         this.img.setAttribute("src", this.data.image[0][i])
@@ -124,7 +124,6 @@ class SkillsModal {
     }
 
     create(data, i) {
-        console.log(data.text[0][i])
         let frontpage = document.querySelector(".frontPage")
         let projects = document.querySelector(".projects")
         this.wrapper.style.display = "block"
@@ -144,6 +143,7 @@ class SkillsModal {
         this.img = document.createElement("img");
         this.img.classList.add("modal__img");
         this.img.setAttribute("src", data.image[0][i])
+        this.img.setAttribute("alt", `an image of the logo of ${this.data.reference[0][i]}`)
 
         this.article = document.createElement("article")
         this.article.classList.add("modal__article")
