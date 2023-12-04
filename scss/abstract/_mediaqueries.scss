@@ -119,6 +119,9 @@
             height: 20rem;
         }
     }
+    .frontPage__languages{
+        flex-direction: column;
+    }
     .skills{
         height: 242rem;
         &__itemsWrapper{
@@ -158,7 +161,7 @@
         }
     }
     .projects{
-        height: 280rem;
+        padding-bottom: 2rem;
         &__item{
             height: fit-content;
         }

@@ -677,6 +677,9 @@ main {
   .halfSquare--undefined {
     height: 20rem;
   }
+  .frontPage__languages {
+    flex-direction: column;
+  }
   .skills {
     height: 242rem;
   }
@@ -716,7 +719,7 @@ main {
     padding: 2rem;
   }
   .projects {
-    height: 280rem;
+    padding-bottom: 2rem;
   }
   .projects__item {
     height: fit-content;
